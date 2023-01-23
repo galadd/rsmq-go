@@ -43,7 +43,7 @@ func main() {
 	})
 
    // Create a new Redis struct with the client and namespace
-	r := NewRedis(client, "rsmq")
+	r := rsmq.NewRedis(client, "rsmq")
 
     // Create a new queue with the name "testqueue", 
     // visibility timeout of 30 seconds, delay of 0 seconds, and maximum size of 4096 bytes
