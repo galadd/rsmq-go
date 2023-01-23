@@ -21,6 +21,25 @@ You can also add the package as a dependency in your go.mod file:
 require github.com/galadd/rsmq-go v1.0.0
 ```
 
+To install Redis on a Linux or macOS system, you can use the package manager to install the Redis server and command-line client. On Ubuntu, you can use apt-get to install Redis:
+
+```bash
+sudo apt-get update
+sudo apt-get install redis-server
+```
+
+On macOS, you can use Homebrew to install Redis:
+
+```bash
+brew install redis
+```
+
+To install Redis on Windows, you can download the latest version of Redis from the [Redis website](https://redis.io/download). After downloading the zip file, extract the contents of the zip file to a folder on your computer. Then, open a command prompt and navigate to the folder where you extracted the Redis files. Run the following command to start the Redis server:
+
+```bash
+redis-server.exe redis.windows.conf
+```
+
 ## Usage
 Here is a simple example of how to use the package:
 
@@ -29,8 +48,8 @@ package main
 
 import (
     "fmt"
-    "time"
 
+    "github.com/go-redis/redis"
     "github.com/galadd/rsmq-go"
 )
 
